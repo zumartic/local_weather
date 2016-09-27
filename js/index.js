@@ -1,7 +1,6 @@
 $(document).ready(function() {
-	var urlWeather = "http://api.openweathermap.org/data/2.5/weather?";  
+	var urlWeather = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?";  
 	var unit = document.getElementById('myonoffswitch').checked;
-
 	$('#input').val("");
 
 	if (navigator.geolocation) {navigator.geolocation.getCurrentPosition(function(position) {
@@ -18,12 +17,12 @@ $(document).ready(function() {
 				'lat': position.coords.latitude,
 				'lon': position.coords.longitude,
 				'APPID': "9f5b382a9edd663ef5c3c625c98b6912"});
-
+    console.log(urlWeather);
 		createContent(urlWeather);
 
-		})
+		});
 		}
-})
+});
 
 
 // Toggle temperature
@@ -47,7 +46,7 @@ function changeTemp() {
 
 // Search city by name
 function searchCity() {
-	var urlWeather = "http://api.openweathermap.org/data/2.5/weather?"; 
+	var urlWeather = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?"; 
 	var unit = document.getElementById('myonoffswitch').checked;
 	var city=$('#input').val();
 	
@@ -84,15 +83,18 @@ function createContent(url){
 	var icon;
 	var windDesc;
 	$('#input').val("");
+  console.log(url);
 	
-	$.ajax({
+	/*$.ajax({
 			url: url,
 			dataType: "jsonp",
-			success: function( response ){
+			success: function( response ){*/
+  $.getJSON( url, function( response ) {
+  
 				var windSpeed = response.wind.speed;
 				windSpeed = windSpeed.toFixed(1);
 				response.main.temp = response.main.temp.toFixed(1);
-				icon = "<img src='icons/" +response.weather[0].icon +".png'>"
+				icon = "<img src='icons/" +response.weather[0].icon +".png'>";
 				$( "div.jumbotron h3" ).text("Weather in " +response.name);
 				
 				// Display temperature
@@ -154,8 +156,9 @@ function createContent(url){
 				});
 			// Wind section end
 			
-		   }
-		});	
-	
+		   
+		}).fail(function(d) {
+                alert("error");
+  });
 }
   
