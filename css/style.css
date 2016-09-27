@@ -1,0 +1,180 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Baloo Bhai;
+  font-size: 150%;
+}
+
+p{
+	font-size: 150%;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  /*background-image: url("http://98five.com/wp-content/uploads/2016/05/weather.gif");*/
+  background-color: #FFF;
+  text-align: center;
+  box-shadow: 10px 10px 5px grey;
+  /*border-bottom: 1px solid #e5e5e5;*/
+}
+
+#demo {
+min-height: 250px;
+}
+
+.jumbotron .btn .btn-success{
+  padding: 14px 24px;
+  font-size: 21px;
+  /*box-shadow: 10px 10px 5px grey;
+  background-color: yellow;*/
+}
+
+
+
+.btn {
+    box-shadow: 10px 10px 5px grey;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.jumbotron .btn:hover{
+    transform: scale(1.1);
+    background-color: green;
+}
+
+.input-group.input-group-unstyled input.form-control {
+	/*position: relative;
+    max-width: 100px;*/
+	-webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+}
+.input-group-unstyled .input-group-addon {
+    border-radius: 4px;
+    border: 0px;
+    background-color: transparent;
+}
+
+
+
+img {
+    /*margin: 20px;*/
+    transition: all 400ms; 
+}
+
+
+footer {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+}
+
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .header {
+    margin-bottom: 30px;
+  }
+  /*
+input[type=text] {
+	position: relative;
+	right: -100px;
+    width: 20px;
+	 border-radius: 20px;
+	-webkit-transition: width 2s ease-in-out;
+    -transition: width 2s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% 
+input[type=text]:hover {
+	-webkit-transition: width 2s ease-in-out;
+    -transition: width 2s ease-in-out;
+     width: 200px;
+}
+*/
+    .onoffswitch {
+        position: relative; width: 55px;
+        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    }
+    .onoffswitch-checkbox {
+        display: none;
+    }
+    .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #999999; border-radius: 20px;
+    }
+    .onoffswitch-inner {
+        display: block; width: 200%; margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+        font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        box-sizing: border-box;
+    }
+    .onoffswitch-inner:before {
+        content: "C";
+        padding-left: 10px;
+        background-color: #EEEEEE; color: #FFFFFF;
+    }
+    .onoffswitch-inner:after {
+        content: "F";
+        padding-right: 10px;
+        background-color: #EEEEEE; color: #999999;
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block; width: 18px; margin: 6px;
+        background: #C5E0E0;
+        position: absolute; top: 0; bottom: 0;
+        right: 21px;
+        border: 2px solid #999999; border-radius: 20px;
+        transition: all 0.3s ease-in 0s; 
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px; 
+        background-color: #EEFF38; 
+    }

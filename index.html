@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Weather Application</title>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Baloo+Bhai'>
+	<link rel="stylesheet" href="css/style.css">  
+  </head>
+
+	<body>
+		<div class="container">
+		  <div class="header clearfix">
+			<h3 class="text-muted">Local Weather</h3>
+			<div class="onoffswitch">
+				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+				<label class="onoffswitch-label" for="myonoffswitch" onclick="changeTemp()">
+					<span class="onoffswitch-inner"></span>
+					<span class="onoffswitch-switch"></span>
+				</label>
+			</div>
+		</div>
+
+		<div class="jumbotron">
+			<div class="row">
+					<div class="col-sm-12">
+						<div class="navbar-form navbar-center">
+							<div class="form-group">
+								<input type="text" class="form-control" id="input" placeholder="Your city">
+							</div>
+							<button type="default" class="btn btn-default" id="button" onclick="searchCity()">Search</button>
+						</div>
+					</div>
+				</div>	
+				
+			<div class="row">
+				<div class="col-sm-12">	
+					<h3 id="cityheader">Weather in your city</h3>
+				</div>
+			</div>	
+				
+			<div class="row">	
+				<div class="col-sm-4" id="icon"></div>
+				<div class="col-sm-4" id="desc"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+					<span class="sr-only">Loading...</span></div>
+				<div class="col-sm-4" id="temp"></div>
+			</div>
+				
+			<div class="row">	
+				<div class="col-sm-4" id="direc"></div>
+				<div class="col-sm-4" id="wdesc"></div>
+				<div class="col-sm-4" id="wpower"></div>
+			</div>
+		</div>
+		<footer class="footer">Site developed by Sami Kangas 2016 with <i class="fa fa-lg fa-music"></i> and <i class="fa fa-lg fa-heart"></i></footer>
+	</div><!-- /container -->
+		  
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+		<script src="js/index.js"></script>    						
+  </body>
+</html>
