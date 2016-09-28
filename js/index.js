@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var urlWeather = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?";  
+	var urlWeather = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?";  
 	var unit = document.getElementById('myonoffswitch').checked;
 	$('#input').val("");
 
@@ -46,7 +46,7 @@ function changeTemp() {
 
 // Search city by name
 function searchCity() {
-	var urlWeather = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?"; 
+	var urlWeather = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?"; 
 	var unit = document.getElementById('myonoffswitch').checked;
 	var city=$('#input').val();
 	
